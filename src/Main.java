@@ -25,7 +25,7 @@ class Fabric {
         } else if (type == "самолёт") {
             return new Airplane();
         } else {
-            return null;
+            throw new RuntimeException("Неизвестный тип транспорта");
         }
     }
 }
