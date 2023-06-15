@@ -18,26 +18,26 @@ class Airplane implements Transport {
 }
 class Fabric {
     public static Transport createTransport(String type) {
-        if (type == "грузовик") {
+        if (type == "по дороге") {
             return new Truck();
-        } else if (type == "судно") {
+        } else if (type == "по морю") {
             return new ship();
-        } else if (type == "самолёт") {
+        } else if (type == "по воздуху") {
             return new Airplane();
         } else {
-            throw new RuntimeException("Неизвестный тип транспорта");
+            throw new RuntimeException("Неизвестный тип перевозок");
         }
     }
 }
     public class Main {
         public static void main(String[] args) {
-            Transport truck = Fabric.createTransport("грузовик");
+            Transport truck = Fabric.createTransport("по дороге");
             truck.perev();
 
-            Transport ship = Fabric.createTransport("судно");
+            Transport ship = Fabric.createTransport("по морю");
             ship.perev();
 
-            Transport airplane = Fabric.createTransport("самолёт");
+            Transport airplane = Fabric.createTransport("по воздуху");
             airplane.perev();
         }
     }
